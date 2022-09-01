@@ -1,8 +1,8 @@
-import {combineReducers} from "redux"
-import searchReducer from "./searchReducer"
+import { combineReducers } from "redux";
+import textSpeechReducer from "./searchReducer";
 
 const rootReducer = combineReducers({
-  emailState: searchReducer,
-})
+  speech: textSpeechReducer,
+});
 
-export default rootReducer
+export default rootReducer;
