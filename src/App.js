@@ -1,9 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
-//import DisplaySpeech from "./display_fetchspeech";
-import VoiceRSS from "./voicerss";
-import DisplaySpeech from "./display_fetchspeech";
 import GetText from "./GetTextApi";
 
 const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
@@ -25,7 +22,6 @@ function App() {
 
   useEffect(() => {
     const google = window.google;
-    /* gobal google */
     google.accounts.id.initialize({
       client_id: GOOGLE_CLIENT_ID,
       callback: handleCallbackResponse,
@@ -38,8 +34,6 @@ function App() {
     google.accounts.id.prompt();
   }, []);
 
-  // if no user, show sign-in button
-  // if user, show log-out button
   return (
     <div className="App">
       <div id="signInDiv"></div>

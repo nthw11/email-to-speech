@@ -1,8 +1,4 @@
-import {
-  FETCH_MAIL_BY_LABEL_ID,
-  FETCH_USER_LABEL_LIST,
-  FETCH_SPEECH,
-} from "../actions";
+import { FETCH_SPEECH } from "../actions";
 
 const textSpeechReducer = (state = [], action) => {
   switch (action.type) {
